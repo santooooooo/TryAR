@@ -9,8 +9,7 @@ public class PlaneDetection : MonoBehaviour
     ARRaycastManager raycastManager;
     [SerializeField] GameObject obj;
     AudioSource audioSource;
-
-    public AudioClip sound1;
+    [SerializeField] AudioClip sound1;
 
     // Start is called before the first frame update
     private void Awake()
@@ -21,7 +20,7 @@ public class PlaneDetection : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if(Input.touchCount == 0 || Input.GetTouch(0).phase != TouchPhase.Ended || obj == null)
         {
